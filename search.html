@@ -1,0 +1,592 @@
+<html>
+    <head>
+        <title>Seat Booking</title>
+        <script src="https://kit.fontawesome.com/71ab0dabd2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                font-family: 'Poppines', sans-serif;
+            }
+
+            .main{
+                height: 100vh;
+            }
+            .container{
+                position: relative;
+                left: 50%;
+                top: 45%;
+                transform: translateX(-50%) translateY(-50%);
+                max-width: 650px;
+                padding: 28px;
+                margin: 0 28px;
+                box-shadow: 0 15px 20px #ABB2B9;
+                box-sizing: border-box;
+            }
+
+            h2{
+                font-size: 26px;
+                font-weight: 600;
+                text-align: left;
+                color: #2f4f4f;
+                padding-bottom: 8px;
+                border-bottom: 1px solid rgb(150, 150, 150);
+            }
+
+            .contentt{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 20px 0;
+                height: 250px;
+                box-sizing: border-box;
+            }
+
+            .input-box{
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                padding-bottom: 15px;
+            }
+
+            .input-box:nth-child(2n){
+                justify-content: end;
+            }
+
+            .input-box label{
+                width: 95%;
+                color: #2f4f4f;
+                font-weight: bold;
+                margin: 5px 0;
+            }
+
+            .input-box select{
+                height: 40px;
+                width: 95%;
+                padding: 0 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                outline: none;
+            }
+
+            .input-box input:is(:focus, :valid){
+                box-shadow: 0 3px 6px #ABB2B9;
+            }
+
+            .input-box input{
+                height: 40px;
+                width: 95%;
+                padding: 0 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                outline: none;
+            }
+
+            .button-container{
+                margin: 15px 0;
+            }
+
+            .button-container #button{
+                cursor: pointer;
+                width: 200%;
+                margin-top: 10px;
+                padding: 10px;
+                display: block;
+                font-size: 20px;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                background-image: linear-gradient(to right, #aa076b, #61045f);
+            }
+
+            .button-container #button:hover{
+                background-image: linear-gradient(to right, #61045f, #aa076b);
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(255, 255, 255);">
+        <header>
+            <div class="brand" style="padding-bottom: 4px;" >
+                <li id="logo"><img src="Images/Artboard 142.png"></li>
+                <!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+                <li class="social-icon">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                
+            </div>
+            <nav class="topnav" id="myTopnav">
+                <ul>
+                    <li class="f1">
+                        <a href="index.html">Home</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li><a href="login.html">Sign In</a></li>
+                    <li><a href="search.html">Seat Booking</a></li>
+                    <li><a href="galary.html">Gallery</a></li>
+                    <li><a href="train_shedule.html">Train Schedule</a></li>
+                    <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                    <li><a href="booking confirm.html">Booking Confirm</a></li>
+                    <li><a href="Help.html">Help</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="aboutus.html">About US</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+        <div class="container">
+            <form action="" onsubmit="return Funerr()">
+                <h2>BOOK YOUR SEAT NOW</h2>
+                <span id="demo" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: red; text-align: center; "></span>
+                <div class="contentt">
+                    <div class="input-box">
+                        <label for="from">From</label>
+                        <select name="from" id="from">
+                            <option value="Choose Station">Choose Station</option>
+							
+								<option value="DEL">Delhi</option>
+								<option value="MUM">Mumbai</option>
+								<option value="BLR">Bangalore</option>
+								<option value="CHE">Chennai</option>
+								<option value="KOL">Kolkata</option>
+								<option value="HYD">Hyderabad</option>
+								<option value="AHM">Ahmedabad</option>
+								<option value="PUN">Pune</option>
+								<option value="AMD">Ahmedabad</option>
+								<option value="CJB">Coimbatore</option>
+								<option value="LKO">Lucknow</option>
+								<option value="PAT">Patna</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IND">Indore</option>
+								<option value="THA">Thane</option>
+								<option value="BHO">Bhopal</option>
+								<option value="VAD">Vadodara</option>
+								<option value="SRT">Surat</option>
+								<option value="LDH">Ludhiana</option>
+								<option value="AGT">Agra</option>
+								<option value="NHS">Nashik</option>
+								<option value="FDI">Faridabad</option>
+								<option value="MSR">Meerut</option>
+								<option value="RJK">Rajkot</option>
+								<option value="GHA">Ghaziabad</option>
+								<option value="AMD">Amritsar</option>
+								<option value="BNA">Bengaluru</option>
+								<option value="FZR">Firozabad</option>
+								<option value="KHJ">Kanpur</option>
+								<option value="VRN">Varanasi</option>
+								<option value="SRT">Srinagar</option>
+								<option value="AYD">Aurangabad</option>
+								<option value="AVD">Amravati</option>
+								<option value="KHD">Khordha</option>
+								<option value="NPN">Napoklu</option>
+								<option value="BGM">Belagavi</option>
+								<option value="GRB">Gorakhpur</option>
+								<option value="SRT">Surendranagar</option>
+								<option value="TIT">Titlagarh</option>
+								<option value="MRD">Moradabad</option>
+								<option value="AGM">Agartala</option>
+								<option value="SAW">Sawai Madhopur</option>
+								<option value="KGL">Kargil</option>
+								<option value="PLN">Pulgaon</option>
+								<option value="AKL">Aklera</option>
+								<option value="PRT">Port Blair</option>
+								<option value="TPT">Tirupati</option>
+								<option value="VSK">Visakhapatnam</option>
+								<option value="VJY">Vijayawada</option>
+								<option value="RJL">Rajahmundry</option>
+								<option value="GNT">Guntur</option>
+								<option value="VZG">Vizianagaram</option>
+								<option value="TUN">Tiruppur</option>
+								<option value="TIR">Tiruchirappalli</option>
+								<option value="KCI">Kochi</option>
+								<option value="KNR">Kannur</option>
+								<option value="KTM">Kottayam</option>
+								<option value="KZD">Kozhikode</option>
+								<option value="MDY">Madurai</option>
+								<option value="TVM">Thiruvananthapuram</option>
+								<option value="TSR">Thrissur</option>
+								<option value="MNM">Mangalore</option>
+								<option value="PNY">Puducherry</option>
+								<option value="AIZ">Aizawl</option>
+								<option value="DMU">Dimapur</option>
+								<option value="GAY">Gaya</option>
+								<option value="IMF">Imphal</option>
+								<option value="JRH">Jorhat</option>
+								<option value="IXI">Lilabari</option>
+								<option value="MZU">Muzaffarpur</option>
+								<option value="IXB">Bagdogra</option>
+								<option value="RRK">Rourkela</option>
+								<option value="IXD">Allahabad</option>
+								<option value="IXR">Ranchi</option>
+								<option value="IXZ">Port Blair</option>
+								<option value="KUU">Kullu</option>
+								<option value="LUH">Ludhiana</option>
+								<option value="SXR">Srinagar</option>
+								<option value="PAT">Patna</option>
+								<option value="VTZ">Visakhapatnam</option>
+								<option value="STV">Surat</option>
+								<option value="IXU">Aurangabad</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IXG">Belgaum</option>
+								<option value="HBX">Hubli</option>
+								<option value="IXL">Leh</option>
+								<option value="IXM">Madurai</option>
+								<option value="IDR">Indore</option>
+								<option value="ISK">Nashik</option>
+								<option value="JAI">Jaipur</option>
+								<option value="JDH">Jodhpur</option>
+								<option value="DEL">Delhi</option>
+								<option value="MUM">Mumbai</option>
+								<option value="BLR">Bangalore</option>
+								<option value="CHE">Chennai</option>
+								<option value="KOL">Kolkata</option>
+								<option value="HYD">Hyderabad</option>
+								<option value="AHM">Ahmedabad</option>
+								<option value="PUN">Pune</option>
+								<option value="AMD">Ahmedabad</option>
+								<option value="CJB">Coimbatore</option>
+								<option value="LKO">Lucknow</option>
+								<option value="PAT">Patna</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IND">Indore</option>
+								<option value="THA">Thane</option>
+								<option value="BHO">Bhopal</option>
+								<option value="VAD">Vadodara</option>
+								<option value="SRT">Surat</option>
+								<option value="LDH">Ludhiana</option>
+								<option value="AGT">Agra</option>
+								<option value="NHS">Nashik</option>
+								<option value="FDI">Faridabad</option>
+								<option value="MSR">Meerut</option>
+								<option value="RJK">Rajkot</option>
+								<option value="GHA">Ghaziabad</option>
+								<option value="AMD">Amritsar</option>
+								<option value="BNA">Bengaluru</option>
+								<option value="FZR">Firozabad</option>
+								<option value="KHJ">Kanpur</option>
+								<option value="VRN">Varanasi</option>
+								<option value="SRT">Srinagar</option>
+								<option value="AYD">Aurangabad</option>
+								<option value="AVD">Amravati</option>
+								<option value="KHD">Khordha</option>
+								<option value="NPN">Napoklu</option>
+								<option value="BGM">Belagavi</option>
+								<option value="GRB">Gorakhpur</option>
+								<option value="SRT">Surendranagar</option>
+								<option value="TIT">Titlagarh</option>
+								<option value="MRD">Moradabad</option>
+								<option value="AGM">Agartala</option>
+								<option value="SAW">Sawai Madhopur</option>
+								<option value="KGL">Kargil</option>
+								<option value="PLN">Pulgaon</option>
+								<option value="AKL">Aklera</option>
+								<option value="PRT">Port Blair</option>
+								<option value="TPT">Tirupati</option>
+								<option value="VSK">Visakhapatnam</option>
+								<option value="VJY">Vijayawada</option>
+								<option value="RJL">Rajahmundry</option>
+								<option value="GNT">Guntur</option>
+								<option value="VZG">Vizianagaram</option>
+								<option value="TUN">Tiruppur</option>
+								<option value="TIR">Tiruchirappalli</option>
+								<option value="KCI">Kochi</option>
+								<option value="KNR">Kannur</option>
+								<option value="KTM">Kottayam</option>
+								<option value="KZD">Kozhikode</option>
+								<option value="MDY">Madurai</option>
+								<option value="TVM">Thiruvananthapuram</option>
+								<option value="TSR">Thrissur</option>
+								<option value="MNM">Mangalore</option>
+								<option value="PNY">Puducherry</option>
+								<option value="AIZ">Aizawl</option>
+								<option value="DMU">Dimapur</option>
+								<option value="GAY">Gaya</option>
+								<option value="IMF">Imphal</option>
+								<option value="JRH">Jorhat</option>
+								<option value="IXI">Lilabari</option>
+								<option value="MZU">Muzaffarpur</option>
+								<option value="IXB">Bagdogra</option>
+								<option value="RRK">Rourkela</option>
+								<option value="IXD">Allahabad</option>
+								<option value="IXR">Ranchi</option>
+								<option value="IXZ">Port Blair</option>
+								<option value="KUU">Kullu</option>
+								<option value="LUH">Ludhiana</option>
+								<option value="SXR">Srinagar</option>
+								<option value="PAT">Patna</option>
+								<option value="VTZ">Visakhapatnam</option>
+								<option value="STV">Surat</option>
+								<option value="IXU">Aurangabad</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IXG">Belgaum</option>
+								<option value="HBX">Hubli</option>
+								<option value="IXL">Leh</option>
+								<option value="IXM">Madurai</option>
+								<option value="IDR">Indore</option>
+								<option value="ISK">Nashik</option>
+								<option value="JAI">Jaipur</option>
+								<option value="JDH">Jodhpur</option>
+							</select>
+							
+                    </div>
+                    <div class="input-box">
+                        <label for="to">To</label>
+                        <select name="to" id="to">
+                            <option value="Choose Station">Choose Station</option>
+							
+								<option value="DEL">Delhi</option>
+								<option value="MUM">Mumbai</option>
+								<option value="BLR">Bangalore</option>
+								<option value="CHE">Chennai</option>
+								<option value="KOL">Kolkata</option>
+								<option value="HYD">Hyderabad</option>
+								<option value="AHM">Ahmedabad</option>
+								<option value="PUN">Pune</option>
+								<option value="AMD">Ahmedabad</option>
+								<option value="CJB">Coimbatore</option>
+								<option value="LKO">Lucknow</option>
+								<option value="PAT">Patna</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IND">Indore</option>
+								<option value="THA">Thane</option>
+								<option value="BHO">Bhopal</option>
+								<option value="VAD">Vadodara</option>
+								<option value="SRT">Surat</option>
+								<option value="LDH">Ludhiana</option>
+								<option value="AGT">Agra</option>
+								<option value="NHS">Nashik</option>
+								<option value="FDI">Faridabad</option>
+								<option value="MSR">Meerut</option>
+								<option value="RJK">Rajkot</option>
+								<option value="GHA">Ghaziabad</option>
+								<option value="AMD">Amritsar</option>
+								<option value="BNA">Bengaluru</option>
+								<option value="FZR">Firozabad</option>
+								<option value="KHJ">Kanpur</option>
+								<option value="VRN">Varanasi</option>
+								<option value="SRT">Srinagar</option>
+								<option value="AYD">Aurangabad</option>
+								<option value="AVD">Amravati</option>
+								<option value="KHD">Khordha</option>
+								<option value="NPN">Napoklu</option>
+								<option value="BGM">Belagavi</option>
+								<option value="GRB">Gorakhpur</option>
+								<option value="SRT">Surendranagar</option>
+								<option value="TIT">Titlagarh</option>
+								<option value="MRD">Moradabad</option>
+								<option value="AGM">Agartala</option>
+								<option value="SAW">Sawai Madhopur</option>
+								<option value="KGL">Kargil</option>
+								<option value="PLN">Pulgaon</option>
+								<option value="AKL">Aklera</option>
+								<option value="PRT">Port Blair</option>
+								<option value="TPT">Tirupati</option>
+								<option value="VSK">Visakhapatnam</option>
+								<option value="VJY">Vijayawada</option>
+								<option value="RJL">Rajahmundry</option>
+								<option value="GNT">Guntur</option>
+								<option value="VZG">Vizianagaram</option>
+								<option value="TUN">Tiruppur</option>
+								<option value="TIR">Tiruchirappalli</option>
+								<option value="KCI">Kochi</option>
+								<option value="KNR">Kannur</option>
+								<option value="KTM">Kottayam</option>
+								<option value="KZD">Kozhikode</option>
+								<option value="MDY">Madurai</option>
+								<option value="TVM">Thiruvananthapuram</option>
+								<option value="TSR">Thrissur</option>
+								<option value="MNM">Mangalore</option>
+								<option value="PNY">Puducherry</option>
+								<option value="AIZ">Aizawl</option>
+								<option value="DMU">Dimapur</option>
+								<option value="GAY">Gaya</option>
+								<option value="IMF">Imphal</option>
+								<option value="JRH">Jorhat</option>
+								<option value="IXI">Lilabari</option>
+								<option value="MZU">Muzaffarpur</option>
+								<option value="IXB">Bagdogra</option>
+								<option value="RRK">Rourkela</option>
+								<option value="IXD">Allahabad</option>
+								<option value="IXR">Ranchi</option>
+								<option value="IXZ">Port Blair</option>
+								<option value="KUU">Kullu</option>
+								<option value="LUH">Ludhiana</option>
+								<option value="SXR">Srinagar</option>
+								<option value="PAT">Patna</option>
+								<option value="VTZ">Visakhapatnam</option>
+								<option value="STV">Surat</option>
+								<option value="IXU">Aurangabad</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IXG">Belgaum</option>
+								<option value="HBX">Hubli</option>
+								<option value="IXL">Leh</option>
+								<option value="IXM">Madurai</option>
+								<option value="IDR">Indore</option>
+								<option value="ISK">Nashik</option>
+								<option value="JAI">Jaipur</option>
+								<option value="JDH">Jodhpur</option>
+								<option value="DEL">Delhi</option>
+								<option value="MUM">Mumbai</option>
+								<option value="BLR">Bangalore</option>
+								<option value="CHE">Chennai</option>
+								<option value="KOL">Kolkata</option>
+								<option value="HYD">Hyderabad</option>
+								<option value="AHM">Ahmedabad</option>
+								<option value="PUN">Pune</option>
+								<option value="AMD">Ahmedabad</option>
+								<option value="CJB">Coimbatore</option>
+								<option value="LKO">Lucknow</option>
+								<option value="PAT">Patna</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IND">Indore</option>
+								<option value="THA">Thane</option>
+								<option value="BHO">Bhopal</option>
+								<option value="VAD">Vadodara</option>
+								<option value="SRT">Surat</option>
+								<option value="LDH">Ludhiana</option>
+								<option value="AGT">Agra</option>
+								<option value="NHS">Nashik</option>
+								<option value="FDI">Faridabad</option>
+								<option value="MSR">Meerut</option>
+								<option value="RJK">Rajkot</option>
+								<option value="GHA">Ghaziabad</option>
+								<option value="AMD">Amritsar</option>
+								<option value="BNA">Bengaluru</option>
+								<option value="FZR">Firozabad</option>
+								<option value="KHJ">Kanpur</option>
+								<option value="VRN">Varanasi</option>
+								<option value="SRT">Srinagar</option>
+								<option value="AYD">Aurangabad</option>
+								<option value="AVD">Amravati</option>
+								<option value="KHD">Khordha</option>
+								<option value="NPN">Napoklu</option>
+								<option value="BGM">Belagavi</option>
+								<option value="GRB">Gorakhpur</option>
+								<option value="SRT">Surendranagar</option>
+								<option value="TIT">Titlagarh</option>
+								<option value="MRD">Moradabad</option>
+								<option value="AGM">Agartala</option>
+								<option value="SAW">Sawai Madhopur</option>
+								<option value="KGL">Kargil</option>
+								<option value="PLN">Pulgaon</option>
+								<option value="AKL">Aklera</option>
+								<option value="PRT">Port Blair</option>
+								<option value="TPT">Tirupati</option>
+								<option value="VSK">Visakhapatnam</option>
+								<option value="VJY">Vijayawada</option>
+								<option value="RJL">Rajahmundry</option>
+								<option value="GNT">Guntur</option>
+								<option value="VZG">Vizianagaram</option>
+								<option value="TUN">Tiruppur</option>
+								<option value="TIR">Tiruchirappalli</option>
+								<option value="KCI">Kochi</option>
+								<option value="KNR">Kannur</option>
+								<option value="KTM">Kottayam</option>
+								<option value="KZD">Kozhikode</option>
+								<option value="MDY">Madurai</option>
+								<option value="TVM">Thiruvananthapuram</option>
+								<option value="TSR">Thrissur</option>
+								<option value="MNM">Mangalore</option>
+								<option value="PNY">Puducherry</option>
+								<option value="AIZ">Aizawl</option>
+								<option value="DMU">Dimapur</option>
+								<option value="GAY">Gaya</option>
+								<option value="IMF">Imphal</option>
+								<option value="JRH">Jorhat</option>
+								<option value="IXI">Lilabari</option>
+								<option value="MZU">Muzaffarpur</option>
+								<option value="IXB">Bagdogra</option>
+								<option value="RRK">Rourkela</option>
+								<option value="IXD">Allahabad</option>
+								<option value="IXR">Ranchi</option>
+								<option value="IXZ">Port Blair</option>
+								<option value="KUU">Kullu</option>
+								<option value="LUH">Ludhiana</option>
+								<option value="SXR">Srinagar</option>
+								<option value="PAT">Patna</option>
+								<option value="VTZ">Visakhapatnam</option>
+								<option value="STV">Surat</option>
+								<option value="IXU">Aurangabad</option>
+								<option value="NAG">Nagpur</option>
+								<option value="IXG">Belgaum</option>
+								<option value="HBX">Hubli</option>
+								<option value="IXL">Leh</option>
+								<option value="IXM">Madurai</option>
+								<option value="IDR">Indore</option>
+								<option value="ISK">Nashik</option>
+								<option value="JAI">Jaipur</option>
+								<option value="JDH">Jodhpur</option>
+							</select>
+							
+                    </div>
+                    <div class="input-box">
+                        <label for="number">Number of Passengers</label>
+                        <input type="text" placeholder="Enter the Number" required id="psn">
+                    </div>
+                    <div class="input-box">
+                        <label for="date">Date</label>
+                        <input type="date" placeholder="Choose Date" required id="date">
+                    </div>
+                    <div class="button-container">
+                        <input id="button" type="submit" style="text-decoration: none; color: white;">
+                        <!-- <button type="submit"> <a href="payment.html" style="text-decoration: none; color: white;">Search</a></button> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+        <footer>
+			<p class="p">&copy; 2024 Train Ticket Booking. All rights reserved.</p>
+		
+			<div class="info">
+				<p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: rgb(255, 255, 255);">R&D Center,Hyderbad Telangana</a> </p>
+				<p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: rgb(255, 255, 255);">(+91) 7842662584</a> </p>
+				<p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: rgb(255, 255, 255);">info@medaairbnb.com</a> </p>
+			</div>
+        </footer>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+    
+            window.onscroll = function() {myFunction2()};
+            var navbar = document.getElementById("myTopnav");
+            var sticky = navbar.offsetTop;
+            function myFunction2() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+            
+            function Funerr(){
+			event.preventDefault();
+			var x = document.getElementById("from").value;
+			var y = document.getElementById("to").value;
+			//alert(x)
+
+			if(x == "Choose Station"){
+				document.getElementById("demo").innerHTML = "Select Your Start Station";
+			}else if(y == "Choose Station"){
+				document.getElementById("demo").innerHTML = "Select Your End Station";
+			}
+			else{
+                window.location.href = "payment.html";
+			}
+			
+		}
+            
+        </script>
+    </body>
+</html>

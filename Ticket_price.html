@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Prices</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+body{
+    margin: 0;
+    background-image: linear-gradient(to right, #ffffff , #f9fdff);
+}
+.content{
+    border-bottom: 1px solid rgba(128, 128, 128, 0);
+    height: 80vh;
+    text-align: center;
+}
+#h1{
+    position: relative;
+    top: -50px;
+    text-align: left;
+    display: inline-block;
+    font-size: 3.1rem;
+    text-shadow: 7px 5px rgba(224, 224, 224, 0.582);
+}
+.include{
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 700px;   
+}
+.division{
+    border: 1px solid rgba(0, 0, 139, 0);
+    margin-top: 100px;
+    background-color: rgb(240, 245, 230);
+    text-align: center;
+}
+.table{
+    border: 1px solid rgba(5, 5, 5, 0);
+    display: inline-block;
+    position: relative;
+    top: 31%;
+    transform: translateX(-40%);
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidearea{
+    width: 300px;
+    float: right;
+    background-image: linear-gradient(to right, #ffffff , #b5e5f8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 50px;
+    margin-top: 30px;
+
+}
+
+.boxarea{
+    border: 1px solid rgba(28, 240, 0, 0);
+    height: 250px;
+    display: inline-block;
+    padding: 0 50px;
+}
+.boxarea h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 7px 5px rgb(223, 223, 223);
+}
+.dropdown h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid rgba(255, 0, 0, 0);
+    display: inline-block;
+    padding: 7px 15px;
+}
+.dropdown-content a{
+    padding: 5px 7px;
+    background-color: gold;
+    cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dropdown-content a:hover{
+    background-color: rgb(241, 21, 21);
+	color: white;
+}
+        td input,select,button{
+            height: 50px;
+        }
+        ::placeholder{
+            font-size: 15px;
+            color: #1a5a74;
+        }
+        .sbtn{
+            background-color: gold;
+        }
+        .sbtn:hover{
+            background-color:rgb(241, 21, 21);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+		<div class="brand" >
+			<li id="logo"><img src="Images/Artboard 142.png"></li>
+			<!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+			<li class="social-icon">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+			
+		</div>
+		<nav class="topnav" id="myTopnav">
+			<ul>
+				<li class="f1">
+					<a href="index.html">Home</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+				<li><a href="login.html">Sign In</a></li>
+				<li><a href="search.html">Seat Booking</a></li>
+                <li><a href="galary.html">Gallery</a></li>
+				<li><a href="train_shedule.html">Train Schedule</a></li>
+                <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                <li><a href="booking confirm.html">Booking Confirm</a></li>
+				<li><a href="Help.html">Help</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About US</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <div class="content">
+        
+        <div class="include">
+            <!-- <div class="img">
+                <img src="Images/tt.jpg" alt="">
+            </div> -->
+            <h1 id="h1">Ticket Price</h1>
+            <div class="table">
+                <form action="#"> 
+                <table >
+                    <tr>
+                        <td style="width:30px">
+                            <div style="width:20px; " ><img style="position: relative;left: 50%;transform: translateX(-25%); width:100%;" src="Images/ti.jpg" alt="#" class="tiimage"></div>
+                        </td>
+                        <td>
+                            <!-- <input type="text" name="f" placeholder="From Southway" class="inputfield" size="25px" > -->
+                            <select name="f" id="from" class="inputfield" >
+                                <option value="From">From:</option>
+                               
+    <option value="8314">Delhi</option>
+    <option value="5962">Mumbai</option>
+    <option value="1087">Bangalore</option>
+    <option value="4521">Chennai</option>
+    <option value="7790">Kolkata</option>
+    <option value="2035">Hyderabad</option>
+    <option value="6879">Ahmedabad</option>
+    <option value="3245">Pune</option>
+    <option value="9487">Ahmedabad</option>
+    <option value="5613">Coimbatore</option>
+    <option value="1420">Lucknow</option>
+    <option value="8602">Patna</option>
+    <option value="3789">Nagpur</option>
+    <option value="2701">Indore</option>
+    <option value="5146">Thane</option>
+    <option value="9351">Bhopal</option>
+    <option value="7614">Vadodara</option>
+    <option value="2085">Surat</option>
+    <option value="4129">Ludhiana</option>
+    <option value="6973">Agra</option>
+    <option value="5412">Nashik</option>
+    <option value="1906">Faridabad</option>
+    <option value="8274">Meerut</option>
+    <option value="6831">Rajkot</option>
+    <option value="1589">Ghaziabad</option>
+    <option value="9654">Amritsar</option>
+    <option value="3265">Bengaluru</option>
+    <option value="7028">Firozabad</option>
+    <option value="4712">Kanpur</option>
+    <option value="2498">Varanasi</option>
+    <option value="1074">Srinagar</option>
+    <option value="5368">Aurangabad</option>
+    <option value="8092">Amravati</option>
+    <option value="4237">Khordha</option>
+    <option value="6924">Napoklu</option>
+    <option value="2587">Belagavi</option>
+    <option value="8802">Gorakhpur</option>
+    <option value="6351">Surendranagar</option>
+    <option value="7793">Titlagarh</option>
+    <option value="1524">Moradabad</option>
+    <option value="1946">Agartala</option>
+    <option value="6189">Sawai Madhopur</option>
+    <option value="3862">Kargil</option>
+    <option value="5431">Pulgaon</option>
+    <option value="2765">Aklera</option>
+    <option value="9704">Port Blair</option>
+    <option value="1357">Tirupati</option>
+    <option value="6870">Visakhapatnam</option>
+    <option value="8506">Vijayawada</option>
+    <option value="2196">Rajahmundry</option>
+    <option value="3915">Guntur</option>
+    <option value="6512">Vizianagaram</option>
+    <option value="4208">Tiruppur</option>
+    <option value="1982">Tiruchirappalli</option>
+    <option value="5738">Kochi</option>
+    <option value="7162">Kannur</option>
+    <option value="6089">Kottayam</option>
+    <option value="9381">Kozhikode</option>
+    <option value="4871">Madurai</option>
+    <option value="3690">Thiruvananthapuram</option>
+    <option value="5240">Thrissur</option>
+    <option value="7654">Mangalore</option>
+    <option value="2965">Puducherry</option>
+    <option value="1359">Aizawl</option>
+    <option value="8620">Dimapur</option>
+    <option value="4259">Gaya</option>
+    <option value="7085">Imphal</option>
+    <option value="5910">Jorhat</option>
+    <option value="9374">Lilabari</option>
+    <option value="2791">Muzaffarpur</option>
+    <option value="1596">Bagdogra</option>
+    <option value="6945">Rourkela</option>
+    <option value="3479">Allahabad</option>
+    <option value="5123">Ranchi</option>
+    <option value="1983">Port Blair</option>
+    <option value="6471">Kullu</option>
+    <option value="3907">Ludhiana</option>
+    <option value="7234">Srinagar</option>
+    <option value="8250">Patna</option>
+    <option value="9403">Visakhapatnam</option>
+    <option value="2869">Surat</option>
+    <option value="4613">Aurangabad</option>
+    <option value="5904">Nagpur</option>
+    <option value="2358">Belgaum</option>
+    <option value="3692">Hubli</option>
+    <option value="1468">Leh</option>
+    <option value="7192">Madurai</option>
+    <option value="8913">Indore</option>
+    <option value="5127">Nashik</option>
+    <option value="2348">Jaipur</option>
+    <option value="8790">Jodhpur</option>
+    <option value="4021">Delhi</option>
+    <option value="6510">Mumbai</option>
+    <option value="1206">Bangalore</option>
+    <option value="7305">Chennai</option>
+    <option value="3056">Kolkata</option>
+    <option value="9640">Hyderabad</option>
+    <option value="2463">Ahmedabad</option>
+    <option value="8157">Pune</option>
+    <option value="5470">Ahmedabad</option>
+    <option value="2103">Coimbatore</option>
+    <option value="6957">Lucknow</option>
+    <option value="3421">Patna</option>
+    <option value="8964">Nagpur</option>
+    <option value="1537">Indore</option>
+    <option value="4836">Thane</option>
+    <option value="6798">Bhopal</option>
+    <option value="4328">Vadodara</option>
+    <option value="1895">Surat</option>
+    <option value="7524">Ludhiana</option>
+    <option value="5710">Agra</option>
+    <option value="3467">Nashik</option>
+    <option value="8492">Faridabad</option>
+    <option value="6730">Meerut</option>
+    <option value="4289">Rajkot</option>
+    <option value="7509">Ghaziabad</option>
+    <option value="2318">Amritsar</option>
+    <option value="4875">Bengaluru</option>
+    <option value="6981">Firozabad</option>
+    <option value="2896">Kanpur</option>
+    <option value="5279">Varanasi</option>
+    <option value="8271">Srinagar</option>
+    <option value="3106">Aurangabad</option>
+    <option value="1469">Amravati</option>
+    <option value="5940">Khordha</option>
+    <option value="8762">Napoklu</option>
+    <option value="2697">Belagavi</option>
+    <option value="7452">Gorakhpur</option>
+    <option value="4820">Surendranagar</option>
+    <option value="3908">Titlagarh</option>
+    <option value="5983">Moradabad</option>
+    <option value="3214">Agartala</option>
+    <option value="9643">Sawai Madhopur</option>
+    <option value="6803">Kargil</option>
+    <option value="1246">Pulgaon</option>
+    <option value="8903">Aklera</option>
+    <option value="2378">Port Blair</option>
+    <option value="5861">Tirupati</option>
+    <option value="9428">Visakhapatnam</option>
+    <option value="5124">Vijayawada</option>
+    <option value="3460">Rajahmundry</option>
+    <option value="7261">Guntur</option>
+    <option value="4893">Vizianagaram</option>
+    <option value="7658">Tiruppur</option>
+    <option value="3098">Tiruchirappalli</option>
+    <option value="5296">Kochi</option>
+    <option value="6748">Kannur</option>
+    <option value="8240">Kottayam</option>
+    <option value="3958">Kozhikode</option>
+    <option value="1956">Madurai</option>
+    <option value="2764">Thiruvananthapuram</option>
+    <option value="4783">Thrissur</option>
+    <option value="8102">Mangalore</option>
+    <option value="6359">Puducherry</option>
+    <option value="2395">Aizawl</option>
+    <option value="7913">Dimapur</option>
+    <option value="9605">Gaya</option>
+    <option value="6283">Imphal</option>
+    <option value="5149">Jorhat</option>
+    <option value="4703">Lilabari</option>
+    <option value="1425">Muzaffarpur</option>
+    <option value="3672">Bagdogra</option>
+    <option value="5194">Rourkela</option>
+    <option value="8257">Allahabad</option>
+    <option value="6132">Ranchi</option>
+    <option value="2568">Port Blair</option>
+    <option value="9631">Kullu</option>
+    <option value="6985">Ludhiana</option>
+    <option value="1724">Srinagar</option>
+    <option value="8254">Patna</option>
+    <option value="5318">Visakhapatnam</option>
+    <option value="9405">Surat</option>
+    <option value="3129">Aurangabad</option>
+    <option value="4570">Nagpur</option>
+    <option value="5874">Belgaum</option>
+    <option value="8201">Hubli</option>
+    <option value="3968">Leh</option>
+    <option value="4731">Madurai</option>
+    <option value="8258">Indore</option>
+    <option value="5270">Nashik</option>
+    <option value="1732">Jaipur</option>
+    <option value="8205">Jodhpur</option>
+</select>
+
+                        </td>
+                        <td style="width:30px">
+                            <div style="width:20px;" ><img style="position: relative;left: 50%;transform: translateX(-25%); width:100%" src="Images/ti.jpg" alt="#" class="tiimage"></div>
+                        </td>
+                        <td >
+                            <!-- <input type="text" name="t" placeholder="To" class="inputfield" size="25px"> -->
+                            <select name="t" id="to" class="inputfield">
+                                <option value="to">To:</option>
+                             
+    <option value="8314">Delhi</option>
+    <option value="5962">Mumbai</option>
+    <option value="1087">Bangalore</option>
+    <option value="4521">Chennai</option>
+    <option value="7790">Kolkata</option>
+    <option value="2035">Hyderabad</option>
+    <option value="6879">Ahmedabad</option>
+    <option value="3245">Pune</option>
+    <option value="9487">Ahmedabad</option>
+    <option value="5613">Coimbatore</option>
+    <option value="1420">Lucknow</option>
+    <option value="8602">Patna</option>
+    <option value="3789">Nagpur</option>
+    <option value="2701">Indore</option>
+    <option value="5146">Thane</option>
+    <option value="9351">Bhopal</option>
+    <option value="7614">Vadodara</option>
+    <option value="2085">Surat</option>
+    <option value="4129">Ludhiana</option>
+    <option value="6973">Agra</option>
+    <option value="5412">Nashik</option>
+    <option value="1906">Faridabad</option>
+    <option value="8274">Meerut</option>
+    <option value="6831">Rajkot</option>
+    <option value="1589">Ghaziabad</option>
+    <option value="9654">Amritsar</option>
+    <option value="3265">Bengaluru</option>
+    <option value="7028">Firozabad</option>
+    <option value="4712">Kanpur</option>
+    <option value="2498">Varanasi</option>
+    <option value="1074">Srinagar</option>
+    <option value="5368">Aurangabad</option>
+    <option value="8092">Amravati</option>
+    <option value="4237">Khordha</option>
+    <option value="6924">Napoklu</option>
+    <option value="2587">Belagavi</option>
+    <option value="8802">Gorakhpur</option>
+    <option value="6351">Surendranagar</option>
+    <option value="7793">Titlagarh</option>
+    <option value="1524">Moradabad</option>
+    <option value="1946">Agartala</option>
+    <option value="6189">Sawai Madhopur</option>
+    <option value="3862">Kargil</option>
+    <option value="5431">Pulgaon</option>
+    <option value="2765">Aklera</option>
+    <option value="9704">Port Blair</option>
+    <option value="1357">Tirupati</option>
+    <option value="6870">Visakhapatnam</option>
+    <option value="8506">Vijayawada</option>
+    <option value="2196">Rajahmundry</option>
+    <option value="3915">Guntur</option>
+    <option value="6512">Vizianagaram</option>
+    <option value="4208">Tiruppur</option>
+    <option value="1982">Tiruchirappalli</option>
+    <option value="5738">Kochi</option>
+    <option value="7162">Kannur</option>
+    <option value="6089">Kottayam</option>
+    <option value="9381">Kozhikode</option>
+    <option value="4871">Madurai</option>
+    <option value="3690">Thiruvananthapuram</option>
+    <option value="5240">Thrissur</option>
+    <option value="7654">Mangalore</option>
+    <option value="2965">Puducherry</option>
+    <option value="1359">Aizawl</option>
+    <option value="8620">Dimapur</option>
+    <option value="4259">Gaya</option>
+    <option value="7085">Imphal</option>
+    <option value="5910">Jorhat</option>
+    <option value="9374">Lilabari</option>
+    <option value="2791">Muzaffarpur</option>
+    <option value="1596">Bagdogra</option>
+    <option value="6945">Rourkela</option>
+    <option value="3479">Allahabad</option>
+    <option value="5123">Ranchi</option>
+    <option value="1983">Port Blair</option>
+    <option value="6471">Kullu</option>
+    <option value="3907">Ludhiana</option>
+    <option value="7234">Srinagar</option>
+    <option value="8250">Patna</option>
+    <option value="9403">Visakhapatnam</option>
+    <option value="2869">Surat</option>
+    <option value="4613">Aurangabad</option>
+    <option value="5904">Nagpur</option>
+    <option value="2358">Belgaum</option>
+    <option value="3692">Hubli</option>
+    <option value="1468">Leh</option>
+    <option value="7192">Madurai</option>
+    <option value="8913">Indore</option>
+    <option value="5127">Nashik</option>
+    <option value="2348">Jaipur</option>
+    <option value="8790">Jodhpur</option>
+    <option value="4021">Delhi</option>
+    <option value="6510">Mumbai</option>
+    <option value="1206">Bangalore</option>
+    <option value="7305">Chennai</option>
+    <option value="3056">Kolkata</option>
+    <option value="9640">Hyderabad</option>
+    <option value="2463">Ahmedabad</option>
+    <option value="8157">Pune</option>
+    <option value="5470">Ahmedabad</option>
+    <option value="2103">Coimbatore</option>
+    <option value="6957">Lucknow</option>
+    <option value="3421">Patna</option>
+    <option value="8964">Nagpur</option>
+    <option value="1537">Indore</option>
+    <option value="4836">Thane</option>
+    <option value="6798">Bhopal</option>
+    <option value="4328">Vadodara</option>
+    <option value="1895">Surat</option>
+    <option value="7524">Ludhiana</option>
+    <option value="5710">Agra</option>
+    <option value="3467">Nashik</option>
+    <option value="8492">Faridabad</option>
+    <option value="6730">Meerut</option>
+    <option value="4289">Rajkot</option>
+    <option value="7509">Ghaziabad</option>
+    <option value="2318">Amritsar</option>
+    <option value="4875">Bengaluru</option>
+    <option value="6981">Firozabad</option>
+    <option value="2896">Kanpur</option>
+    <option value="5279">Varanasi</option>
+    <option value="8271">Srinagar</option>
+    <option value="3106">Aurangabad</option>
+    <option value="1469">Amravati</option>
+    <option value="5940">Khordha</option>
+    <option value="8762">Napoklu</option>
+    <option value="2697">Belagavi</option>
+    <option value="7452">Gorakhpur</option>
+    <option value="4820">Surendranagar</option>
+    <option value="3908">Titlagarh</option>
+    <option value="5983">Moradabad</option>
+    <option value="3214">Agartala</option>
+    <option value="9643">Sawai Madhopur</option>
+    <option value="6803">Kargil</option>
+    <option value="1246">Pulgaon</option>
+    <option value="8903">Aklera</option>
+    <option value="2378">Port Blair</option>
+    <option value="5861">Tirupati</option>
+    <option value="9428">Visakhapatnam</option>
+    <option value="5124">Vijayawada</option>
+    <option value="3460">Rajahmundry</option>
+    <option value="7261">Guntur</option>
+    <option value="4893">Vizianagaram</option>
+    <option value="7658">Tiruppur</option>
+    <option value="3098">Tiruchirappalli</option>
+    <option value="5296">Kochi</option>
+    <option value="6748">Kannur</option>
+    <option value="8240">Kottayam</option>
+    <option value="3958">Kozhikode</option>
+    <option value="1956">Madurai</option>
+    <option value="2764">Thiruvananthapuram</option>
+    <option value="4783">Thrissur</option>
+    <option value="8102">Mangalore</option>
+    <option value="6359">Puducherry</option>
+    <option value="2395">Aizawl</option>
+    <option value="7913">Dimapur</option>
+    <option value="9605">Gaya</option>
+    <option value="6283">Imphal</option>
+    <option value="5149">Jorhat</option>
+    <option value="4703">Lilabari</option>
+    <option value="1425">Muzaffarpur</option>
+    <option value="3672">Bagdogra</option>
+    <option value="5194">Rourkela</option>
+    <option value="8257">Allahabad</option>
+    <option value="6132">Ranchi</option>
+    <option value="2568">Port Blair</option>
+    <option value="9631">Kullu</option>
+    <option value="6985">Ludhiana</option>
+    <option value="1724">Srinagar</option>
+    <option value="8254">Patna</option>
+    <option value="5318">Visakhapatnam</option>
+    <option value="9405">Surat</option>
+    <option value="3129">Aurangabad</option>
+    <option value="4570">Nagpur</option>
+    <option value="5874">Belgaum</option>
+    <option value="8201">Hubli</option>
+    <option value="3968">Leh</option>
+    <option value="4731">Madurai</option>
+    <option value="8258">Indore</option>
+    <option value="5270">Nashik</option>
+    <option value="1732">Jaipur</option>
+    <option value="8205">Jodhpur</option>
+</select>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" >
+                            <select name="clz" id="clz" style="font-size: 1em; width: 100%; color: #383939; padding-left: 5px;">
+                                <option selected disabled>Choose your class</option>
+                                <option value="0"> 1<sup>st</sup> Class </option>
+                                <option value="50"> 2<sup>nd</sup> Class </option>
+                                <option value="100"> 3<sup>rd</sup> Class </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="font-size: 1em; width: 100%; border: 1px solid rgba(0, 0, 0, 0.658); padding: 15px 0 15px 12px; text-align: left; border-radius: 2px;">PRICE: <span id="price"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><button onclick="Fun()" type="submit" class="sbtn" style="width: 100%; cursor: pointer; font-size: 20px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border: none; ">Ticket price</button></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+            <div style="width:80px; position: absolute; left:71%; top: 18%;"><img style="width:100%" src="Images/bulb.png" alt=""></div>
+            <div class="sidearea">
+                    <h1 style=" text-align: center; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Did you know?</h1>
+                    <h3 style=" padding: 0 0 0 20px; text-align: left; font-weight: 500; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">What are the Train Classes .?</h3>
+                    <p style="text-align: justify; padding: 0 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Depending on the length of your trip and your preferences you can
+                        choose a first or second class ticket in a sleeper coach for an
+                        overnight trip or opt for a hard or soft seat if available.
+                        Note that the choice of ticket classes depends both on the
+                        route and the length of your trip. Basically, your train may
+                        feature first class berths but you will not be able to book
+                        one if you are doing just a short two-hour stretch. In general,
+                        second class berths are a good choice for longer trips, and soft
+                        seats get you covered if your train ride is supposed to take under
+                        4-5 hours.</p>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="division" >
+            <div class="boxarea">
+                <h1>Search ticket prices Mannualy</h1>
+                <div class="dropdown">
+                    <h3>Choose The Train Class</h3>
+                    <div class="dropdown-content">
+                        <a  onclick="page3()">1<sup>st</sup> Class</a>
+                        <a  onclick="page1()">2<sup>nd</sup> Class</a>
+                        <a  onclick="page2()">3<sup>rd</sup> Class</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="iframearea" style="border: 1px solid rgba(255, 0, 0, 0); height: 80vh; overflow: hidden;">
+                <div style="border: 1px solid rgba(22, 15, 15, 0);  margin: 10px 50px;">
+                    <iframe style="border: 1px solid rgb(22, 15, 15); height: 70vh; background-color: lightgray;" width="100%" id="myframe" frameborder="0" scrolling="yes" onload="resizeIframe(this)">
+                        <!-- <h2></h2> -->
+                    </iframe>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p class="p">&copy; 2024 Train Ticket Booking. All rights reserved.</p>
+		
+            <div class="info">
+                <p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: rgb(255, 255, 255);">R&D Center,Hyderbad Telangana</a> </p>
+                <p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: rgb(255, 255, 255);">(+91) 7842662584</a> </p>
+                <p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: rgb(255, 255, 255);">info@medaairbnb.com</a> </p>
+            </div>
+        </footer>
+
+
+    <script>
+        //iframe Javascript
+
+        function page1() {
+            var iframe = document.getElementById("myframe");
+
+            iframe.src ="page01forTicket.html";
+        }
+
+        function page2() {
+            var iframe = document.getElementById("myframe");
+
+            iframe.src ="page02forTicket.html";
+        }
+
+        function page3() {
+            var iframe = document.getElementById("myframe");
+
+            iframe.src ="page03forTicket.html";
+        }
+
+        //iframe length Javascript
+
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+    <script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+
+		window.onscroll = function() {myFunction2()};
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+		function myFunction2() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+		}
+
+		function Fun(){
+            event.preventDefault();
+            
+           var Start,End,CLZ,ANS;
+           var from = document.getElementById("from").value;
+           var to = document.getElementById("to").value;
+           var clz = document.getElementById("clz").value;
+
+           CLZ = parseInt(clz,10); 
+           if(CLZ == 0){
+                if(from != to){
+                    Start = parseInt(from, 10);
+                    End = parseInt(to, 10);
+                    if(Start>End){
+                        ANS = (Start - End)+100;
+                        document.getElementById("price").innerHTML =" Rs." + ANS;
+                    }else{
+                        ANS = (End - Start)+100;
+                        document.getElementById("price").innerHTML =" Rs." + ANS
+                    }  
+                }else{
+                    document.getElementById("price").innerHTML = " NOT VALID INPUT"
+                }
+           }else if(CLZ == 50){
+                if(from != to){
+                        Start = parseInt(from, 10);
+                        End = parseInt(to, 10);
+                        if(Start>End){
+                            ANS = (Start - End)+50;
+                            document.getElementById("price").innerHTML =" Rs." + ANS;
+                        }else{
+                            ANS = (End - Start)+50;
+                            document.getElementById("price").innerHTML =" Rs." + ANS
+                        }  
+                    }else{
+                        document.getElementById("price").innerHTML = " NOT VALID INPUT"
+                    }
+           }else if(CLZ == 100){
+                if(from != to){
+                        Start = parseInt(from, 10);
+                        End = parseInt(to, 10);
+                        if(Start>End){
+                            ANS = Start - End;
+                            document.getElementById("price").innerHTML =" Rs." + ANS;
+                        }else{
+                            ANS = End - Start;
+                            document.getElementById("price").innerHTML =" Rs." + ANS
+                        }  
+                    }else{
+                        document.getElementById("price").innerHTML = " NOT VALID INPUT"
+                    }
+           }
+           
+        }
+	</script>
+</body>
+
+</html>

@@ -18,13 +18,13 @@ Welcome to AIRBNB, a web-based train reservation system developed as part of our
 
 ## Live Demo
 
-Experience ”AIRBNB - Accessible Infrastructure for Railway Bookings and Networking Bureau” live by visiting [here]().
+Experience ”AIRBNB - Accessible Infrastructure for Railway Bookings and Networking Bureau” live by visiting [here](https://dineshduvvuri.github.io/AIRBNB/).
 
 ## Installation
 
 To run TrainGo locally, follow these steps:
 
-1. Clone the repository: `git clone `
+1. Clone the repository: `git clone https://dineshduvvuri.github.io/AIRBNB/`
 2. Navigate to the project directory: `cd "AIRBNB”`
 3. Open `index.html` in your preferred web browser.
 
